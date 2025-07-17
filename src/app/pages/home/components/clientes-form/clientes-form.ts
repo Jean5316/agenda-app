@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Cliente, ClienteService } from '../../services/cliente';
+import { Cliente, ClienteService } from '../../services/clienteService';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-clientes-form',
-  imports: [CommonModule, FormsModule],
+  // imports: [CommonModule, FormsModule],
+  standalone:false,
   templateUrl: './clientes-form.html',
   styleUrl: './clientes-form.css'
 })

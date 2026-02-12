@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Cliente, ClienteService } from '../../services/clienteService';
 
 @Component({
@@ -13,7 +13,7 @@ import { Cliente, ClienteService } from '../../services/clienteService';
 export class ClientesList {
   clientes: Cliente[] = [];
 
-  constructor(private clienteService: ClienteService){
+  constructor(private clienteService: ClienteService, private router: Router) {
 
   }
 

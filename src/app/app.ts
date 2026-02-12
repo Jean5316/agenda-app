@@ -3,6 +3,7 @@ import { Component, signal } from '@angular/core';
 //import { ClientesForm } from "./pages/home/components/clientes-form/clientes-form";
 import { RouterOutlet } from '@angular/router';
 import { HomeModule } from './pages/home/home-module';
+import { FormsModule } from '@angular/forms';
 //Usando Rotas nao é necessario chamar components no HTML do app
 
 @Component({

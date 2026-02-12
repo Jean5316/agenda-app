@@ -20,23 +20,23 @@ export class ClienteService {
   }
 
   listar(): Observable<Cliente[]>{
-    return this.http.get<Cliente[]>(this.apiUrl)
+    return this.http.get<Cliente[]>(`${this.apiUrl}/listarContatos`)
   }
 
   buscarPorId(id: number): Observable<Cliente>{
-    return this.http.get<Cliente>(`${this.apiUrl}/${id}`)
+    return this.http.get<Cliente>(`${this.apiUrl}/ObterPorId/${id}`)
   }
 
   criar(cliente: Cliente): Observable<Cliente>{
-    return this.http.post<Cliente>(`${this.apiUrl}`, cliente)
+    return this.http.post<Cliente>(`${this.apiUrl}/CriarNovoContato`, cliente)
   }
 
   atualizar(cliente: Cliente): Observable<any>{
-    return this.http.put(`${this.apiUrl}/${cliente.id}`, cliente)
+    return this.http.put(`${this.apiUrl}/AtualizarContato/${cliente.id}`, cliente)
   }
 
   excluir(id: number): Observable<any>{
-    return this.http.delete(`${this.apiUrl}?id=${id}`)
+    return this.http.delete(`${this.apiUrl}/DeletarContato/${id}`)
   }
   
 }

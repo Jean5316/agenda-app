@@ -27,6 +27,10 @@ export class ClienteService {
     return this.http.get<Cliente>(`${this.apiUrl}/ObterPorId/${id}`)
   }
 
+  buscarPorNome(nome: string): Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(`${this.apiUrl}/ObterPorNome?nome=${nome}`)
+  }
+
   criar(cliente: Cliente): Observable<Cliente>{
     return this.http.post<Cliente>(`${this.apiUrl}/CriarNovoContato`, cliente)
   }
